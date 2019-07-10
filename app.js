@@ -15,7 +15,7 @@ bot.onText(/\/help/, function (msg, match){
     bot.sendMessage(msg.chat.id, `/delete <id> `);
 });
 bot.onText(/\/create(.+)/, async function (msg, match){
-    const ChatModel = db.getModel('chat');
+    const ChatModel = db.getModel('ChatModel');
    let authorId = msg.from.id;
    let chatId = msg.chat.id;
    let fullText = match[1].split('^');
